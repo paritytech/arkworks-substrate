@@ -150,7 +150,7 @@ dependencies = [
 [[package]]
 name = "ark-curve-constraint-tests"
 version = "0.4.0-alpha"
-source = "git+https://github.com/paritytech/ark-substrate.git#8a795e6fd99fc8ea81336526bd2b1c835c8c5021"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
 dependencies = [
  "ark-ff",
  "ark-r1cs-std",
@@ -2083,7 +2083,6 @@ name = "sp-ark-bls12-377"
 version = "0.4.0-alpha"
 dependencies = [
  "ark-algebra-test-templates",
- "ark-bls12-377",
  "ark-curve-constraint-tests",
  "ark-ec",
  "ark-ff",
@@ -2093,14 +2092,29 @@ dependencies = [
  "ark-serialize",
  "ark-std",
  "parity-scale-codec",
+ "sp-ark-bls12-377 0.4.0-alpha (git+https://github.com/paritytech/ark-substrate.git)",
  "sp-ark-models",
  "sp-io",
 ]
 
 [[package]]
+name = "sp-ark-bls12-377"
+version = "0.4.0-alpha"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
+dependencies = [
+ "ark-bls12-377",
+ "ark-ff",
+ "ark-r1cs-std",
+ "ark-scale",
+ "ark-std",
+ "parity-scale-codec",
+ "sp-ark-models",
+]
+
+[[package]]
 name = "sp-ark-bls12-381"
 version = "0.4.0-alpha"
-source = "git+https://github.com/paritytech/ark-substrate.git#8a795e6fd99fc8ea81336526bd2b1c835c8c5021"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
 dependencies = [
  "ark-bls12-381",
  "ark-ff",
@@ -2112,9 +2126,53 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp-ark-bw6-761"
+version = "0.4.0-alpha"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
+dependencies = [
+ "ark-bw6-761",
+ "ark-ff",
+ "ark-scale",
+ "ark-std",
+ "parity-scale-codec",
+ "sp-ark-models",
+]
+
+[[package]]
+name = "sp-ark-ed-on-bls12-377"
+version = "0.4.0-alpha"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
+dependencies = [
+ "ark-ed-on-bls12-377",
+ "ark-ff",
+ "ark-r1cs-std",
+ "ark-scale",
+ "ark-serialize",
+ "ark-std",
+ "parity-scale-codec",
+ "sp-ark-models",
+]
+
+[[package]]
+name = "sp-ark-ed-on-bls12-381-bandersnatch"
+version = "0.4.0-alpha"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
+dependencies = [
+ "ark-ec",
+ "ark-ed-on-bls12-381-bandersnatch",
+ "ark-ff",
+ "ark-r1cs-std",
+ "ark-scale",
+ "ark-std",
+ "parity-scale-codec",
+ "sp-ark-bls12-381",
+ "sp-ark-models",
+]
+
+[[package]]
 name = "sp-ark-models"
 version = "0.4.0-alpha"
-source = "git+https://github.com/paritytech/ark-substrate.git#8a795e6fd99fc8ea81336526bd2b1c835c8c5021"
+source = "git+https://github.com/paritytech/ark-substrate.git#21d67c906e96298779a5c683cb0018984a7c2d92"
 dependencies = [
  "ark-ec",
  "ark-ff",
@@ -2151,7 +2209,6 @@ name = "sp-bls12-381"
 version = "0.4.0-alpha"
 dependencies = [
  "ark-algebra-test-templates",
- "ark-bls12-381",
  "ark-ec",
  "ark-ff",
  "ark-scale",
@@ -2159,6 +2216,7 @@ dependencies = [
  "ark-std",
  "hex",
  "parity-scale-codec",
+ "sp-ark-bls12-381",
  "sp-ark-models",
  "sp-io",
 ]
@@ -2168,13 +2226,13 @@ name = "sp-bw6-761"
 version = "0.4.0-alpha"
 dependencies = [
  "ark-algebra-test-templates",
- "ark-bw6-761",
  "ark-ec",
  "ark-ff",
  "ark-scale",
  "ark-serialize",
  "ark-std",
  "parity-scale-codec",
+ "sp-ark-bw6-761",
  "sp-ark-models",
  "sp-io",
 ]
@@ -2254,7 +2312,6 @@ dependencies = [
  "ark-algebra-test-templates",
  "ark-curve-constraint-tests",
  "ark-ec",
- "ark-ed-on-bls12-377",
  "ark-ff",
  "ark-r1cs-std",
  "ark-relations",
@@ -2262,6 +2319,7 @@ dependencies = [
  "ark-serialize",
  "ark-std",
  "parity-scale-codec",
+ "sp-ark-ed-on-bls12-377",
  "sp-ark-models",
  "sp-io",
 ]
@@ -2273,7 +2331,6 @@ dependencies = [
  "ark-algebra-test-templates",
  "ark-curve-constraint-tests",
  "ark-ec",
- "ark-ed-on-bls12-381-bandersnatch",
  "ark-ff",
  "ark-r1cs-std",
  "ark-relations",
@@ -2282,6 +2339,7 @@ dependencies = [
  "ark-std",
  "parity-scale-codec",
  "sp-ark-bls12-381",
+ "sp-ark-ed-on-bls12-381-bandersnatch",
  "sp-ark-models",
  "sp-io",
 ]
