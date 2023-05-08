@@ -1,12 +1,10 @@
 pub mod curves;
 
-pub use sp_ark_bls12_377::{fq12, fq2, fr, Fq, Fq12Config, Fq2, Fq2Config, Fq6Config, Fr, FrConfig};
 pub use curves::*;
-use sp_ark_bls12_377::{
-    Bls12_377 as Bls12_377Host, G1Projective as G1ProjectiveHost, G2Projective as G2ProjectiveHost,
-    HostFunctions,
+pub use sp_ark_bls12_377::{
+    fq12, fq2, fr, Fq, Fq12Config, Fq2, Fq2Config, Fq6Config, Fr, FrConfig,
 };
-
+use sp_ark_bls12_377::{Bls12_377 as Bls12_377Host, HostFunctions};
 
 #[derive(PartialEq, Eq)]
 pub struct Host;
