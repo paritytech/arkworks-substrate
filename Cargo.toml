@@ -1,0 +1,37 @@
+[workspace]
+
+members = [
+    "bls12_377",
+    "ed_on_bls12_377",
+
+    "bw6_761",
+
+    "bls12_381",
+    "ed_on_bls12_381_bandersnatch",
+]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+incremental = true
+panic = 'abort'
+
+[profile.bench]
+opt-level = 3
+debug = false
+rpath = false
+lto = "thin"
+incremental = true
+debug-assertions = false
+
+[profile.dev]
+opt-level = 0
+panic = 'abort'
+
+[profile.test]
+opt-level = 3
+lto = "thin"
+incremental = true
+debug-assertions = true
+debug = true

@@ -1,0 +1,43 @@
+[package]
+name = "sp-bls12-381"
+version = "0.4.0-alpha"
+authors = ["Parity Technologies <admin@parity.io>", "Achim Schneider <achim@parity.io>", "arkworks contributors" ]
+description = "The BLS12-381 pairing-friendly elliptic curve, optimized for Substrate"
+repository = "https://github.com/paritytech/ark-substrate"
+keywords = ["cryptography", "finite-fields", "elliptic-curves", "substrate" ]
+categories = ["cryptography"]
+include = ["Cargo.toml", "src", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
+license = "MIT/Apache-2.0"
+edition = "2021"
+publish = true
+
+[dependencies]
+ark-ff = { version = "0.4.2", default-features = false }
+ark-std = { version = "0.4.0", default-features = false }
+ark-bls12-381 = { version = "0.4.0",features = [ "curve" ], default-features = false }
+sp-ark-models = { path = "../../models", version = "0.4.0-alpha", default-features = false }
+codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
+ark-scale = { git = "https://github.com/w3f/ark-scale", version = "0.0.2", default-features = false }
+ark-serialize = { version = "0.4.2", default-features = false }
+
+[dev-dependencies] 
+sp-io =  { git = "https://github.com/paritytech/substrate.git", "branch" = "achimcc/arkworks-integration", version = "7.0.0", default-features = false }
+ark-algebra-test-templates = { version = "0.4.2", default-features = false }
+hex = { version = "^0.4.0", default-features = false }
+ark-ec = { version = "0.4.2", default-features = false }
+
+[features]
+default = [ "std" ]
+std = [  
+    "ark-ff/std", 
+    "ark-std/std", 
+    "ark-bls12-381/std",
+    "sp-ark-models/std",
+    "codec/std",
+    "ark-scale/std",
+    "ark-serialize/std",
+    "sp-io/std",
+]
+
+curve = [ "scalar_field" ]
+scalar_field = []
