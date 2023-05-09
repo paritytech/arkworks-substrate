@@ -1,5 +1,5 @@
-use sp_ark_bw6_761::{
-    curves::Config as ConfigHost, G1Affine as G1AffineHost, G1Projective as G1ProjectiveHost,
+use sp_ark_bw6_761::curves::g1::{
+    Config as ConfigHost, G1Affine as G1AffineHost, G1Projective as G1ProjectiveHost,
 };
 
 pub type G1Affine = G1AffineHost<crate::Host>;
