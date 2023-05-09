@@ -8,3 +8,6 @@ pub use self::{
     g1::{G1Affine, G1Projective},
     g2::{G2Affine, G2Projective},
 };
+
+#[cfg(test)]
+mod tests;
