@@ -1,6 +1,7 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 pub mod curves;
 
+use ark_std::vec::Vec;
 pub use curves::*;
 pub use sp_ark_bw6_761::{fq, fq::*, fq3, fq3::*, fq6, fq6::*, fr, fr::*, HostFunctions};
 
