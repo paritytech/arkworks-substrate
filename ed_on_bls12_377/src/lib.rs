@@ -1,3 +1,4 @@
+#![cfg_attr(not(feature = "std"), no_std)]
 use sp_ark_ed_on_bls12_377::HostFunctions;
 pub mod curves;
 
