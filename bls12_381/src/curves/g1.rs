@@ -1,19 +1,17 @@
-use ark_ff::{Field, MontFp, PrimeField, Zero};
-use ark_scale::hazmat::ArkScaleProjective;
-use ark_std::{marker::PhantomData, ops::Neg, One};
-use codec::{Decode, Encode};
-use sp_ark_models::{
-    bls12,
-    bls12::Bls12Config,
-    short_weierstrass::{Affine, Projective, SWCurveConfig},
-    AffineRepr, CurveConfig, Group,
+use sp_ark_bls12_381::g1::Config as ConfigHost;
+use sp_ark_bls12_381::{
+    curves::g1::endomorphism as endomorphismHost, G1Affine as G1AffineHost,
+    G1Projective as G1ProjectiveHost,
 };
+use sp_ark_models::short_weierstrass::Affine;
 
-use crate::util::{
-    read_g1_compressed, read_g1_uncompressed, serialize_fq, EncodingFlags, G1_SERIALIZED_SIZE,
-};
-use crate::{ArkScale, HostFunctions};
-use sp_ark_bls12_381::{fr::Fr, Fq, G1Affine as G1AffineHost, G1Projective as G1ProjectiveHost};
+pub type Config = ConfigHost<crate::Host>;
 
-pub type G1Affine = bls12::G1Affine<crate::Config<H>>;
-pub type G1Projective = bls12::G1Projective<crate::Config<H>>;
+pub type G1Affine = G1AffineHost<crate::Host>;
+pub type G1Projective = G1ProjectiveHost<crate::Host>;
+
+pub use sp_ark_bls12_381::curves::g1::{BETA, G1_GENERATOR_X, G1_GENERATOR_Y};
+
+pub fn endomorphism(p: &Affine<Config>) -> Affine<Config> {
+    endomorphismHost::<crate::Host>(p)
+}
