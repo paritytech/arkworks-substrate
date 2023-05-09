@@ -1,0 +1,82 @@
+name: Check Set-Up & Build
+
+on:
+  push:
+    branches:    
+      - '*'
+  pull_request:
+    branches: 
+
+  workflow_dispatch:
+
+jobs:   
+  rustfmt:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+          components: rustfmt
+
+      - uses: actions/checkout@v3
+
+      - name: Cargo fmt
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: nightly
+          command: fmt
+          args: --all -- --check   
+
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+
+      - name: Check Build
+        run: |
+          cargo build --workspace --release
+
+  clippy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+          components: rustfmt      
+          
+      - name: Cargo clippy
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: stable
+          command: clippy
+          args: --workspace --all-targets
+
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+      - name: Run tests
+        run: cargo test --workspace --verbose
+
+      
