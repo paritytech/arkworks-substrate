@@ -1,5 +1,5 @@
 [package]
-name = "sp-ark-bls12-377"
+name = "sp-bls12-377"
 version = "0.4.0-alpha"
 authors = ["Parity Technologies <admin@parity.io>", "Achim Schneider <achim@parity.io>", "arkworks contributors" ]
 repository = "https://github.com/paritytech/ark-substrate"

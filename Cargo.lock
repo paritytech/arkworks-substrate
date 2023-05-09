@@ -2081,24 +2081,6 @@ checksum = "a507befe795404456341dfab10cef66ead4c041f62b8b11bbb92bffe5d0953e0"
 [[package]]
 name = "sp-ark-bls12-377"
 version = "0.4.0-alpha"
-dependencies = [
- "ark-algebra-test-templates",
- "ark-curve-constraint-tests",
- "ark-ec",
- "ark-ff",
- "ark-relations",
- "ark-scale",
- "ark-serialize",
- "ark-std",
- "parity-scale-codec",
- "sp-ark-bls12-377 0.4.0-alpha (git+https://github.com/paritytech/ark-substrate.git)",
- "sp-ark-models",
- "sp-io",
-]
-
-[[package]]
-name = "sp-ark-bls12-377"
-version = "0.4.0-alpha"
 source = "git+https://github.com/paritytech/ark-substrate.git#eb33905d2a6fab3062c3e134fc5b71a8ff7afffe"
 dependencies = [
  "ark-bls12-377",
@@ -2201,6 +2183,24 @@ dependencies = [
  "ark-std",
  "parity-scale-codec",
  "sp-std",
+]
+
+[[package]]
+name = "sp-bls12-377"
+version = "0.4.0-alpha"
+dependencies = [
+ "ark-algebra-test-templates",
+ "ark-curve-constraint-tests",
+ "ark-ec",
+ "ark-ff",
+ "ark-relations",
+ "ark-scale",
+ "ark-serialize",
+ "ark-std",
+ "parity-scale-codec",
+ "sp-ark-bls12-377",
+ "sp-ark-models",
+ "sp-io",
 ]
 
 [[package]]
