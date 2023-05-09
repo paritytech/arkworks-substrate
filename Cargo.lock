@@ -2086,7 +2086,6 @@ dependencies = [
  "ark-curve-constraint-tests",
  "ark-ec",
  "ark-ff",
- "ark-r1cs-std",
  "ark-relations",
  "ark-scale",
  "ark-serialize",

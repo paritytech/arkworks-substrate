@@ -1,8 +1,9 @@
-use sp_ark_bls12_377::g2::Config as ConfigHost;
-use sp_ark_models::bls12;
+use sp_ark_bls12_377::g2::{
+    Config as ConfigHost, G2Affine as G2AffineHost, G2Projective as G2ProjectiveHost,
+};
 
-pub type G2Affine = bls12::G2Affine<crate::curves::Config>;
-pub type G2Projective = bls12::G2Projective<crate::curves::Config>;
+pub type G2Affine = G2AffineHost<crate::Host>;
+pub type G2Projective = G2ProjectiveHost<crate::Host>;
 
 pub type Config = ConfigHost<crate::Host>;
 

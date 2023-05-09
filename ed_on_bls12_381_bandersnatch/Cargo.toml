@@ -11,22 +11,22 @@ license = "MIT/Apache-2.0"
 edition = "2021"
 
 [dependencies]
-ark-ff = { version = "0.4.2", default-features = false }
-ark-std = { version = "0.4.0", default-features = false }
 ark-r1cs-std = { version = "0.4.0", default-features = false, optional = true }
 sp-ark-bls12-381 = {  git = "https://github.com/paritytech/ark-substrate.git", default-features = false, features = [ "scalar_field" ] }
-sp-ark-models = { git = "https://github.com/paritytech/ark-substrate.git",  default-features = false }
-codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
-ark-scale = { git = "https://github.com/w3f/ark-scale", version = "0.0.2", features = ["hazmat"], default-features = false }
 sp-ark-ed-on-bls12-381-bandersnatch = { git = "https://github.com/paritytech/ark-substrate.git", default-features = false }
-ark-ec = { version = "0.4.2", default-features = false }
 sp-io =  { git = "https://github.com/paritytech/substrate.git", "branch" = "achimcc/arkworks-integration", version = "7.0.0",  default-features = false }
 
 [dev-dependencies]
+ark-ff = { version = "0.4.2", default-features = false }
+ark-std = { version = "0.4.0", default-features = false }
 ark-relations = { version = "0.4.0", default-features = false }
 ark-serialize = { version = "0.4.2", default-features = false }
 ark-algebra-test-templates = { version = "0.4.2", default-features = false }
 ark-curve-constraint-tests = { git = "https://github.com/paritytech/ark-substrate.git", default-features = false }
+sp-ark-models = { git = "https://github.com/paritytech/ark-substrate.git",  default-features = false }
+codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
+ark-scale = { git = "https://github.com/w3f/ark-scale", version = "0.0.2", features = ["hazmat"], default-features = false }
+ark-ec = { version = "0.4.2", default-features = false }
 
 [features]
 default = ["std"]
