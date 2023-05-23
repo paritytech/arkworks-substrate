@@ -37,4 +37,3 @@ debug-assertions = true
 debug = true
 
 [patch.crates-io]
-sp-io =  { git = "https://github.com/paritytech/substrate.git", "branch" = "achimcc/arkworks-integration" }
