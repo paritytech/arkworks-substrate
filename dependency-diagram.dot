@@ -1,0 +1,18 @@
+skinparam ranksep 20
+skinparam dpi 125
+skinparam packageTitleAlignment left
+
+rectangle "Substrate" {
+  (ring-vrf)
+  (sp-crypto-ec-utils)
+}
+rectangle "ark-substrate" {
+  (sp-ark-curves)
+  (sp-ark-models)
+}
+rectangle "<b>substrate-curves</b>" as sp_curves
+
+(sp-crypto-ec-utils) ..> (sp-ark-curves)
+sp_curves ==> (sp-crypto-ec-utils)
+(sp-ark-curves)==> (sp-ark-models) 
+(ring-vrf) --> (sp-ark-curves)

@@ -26,7 +26,7 @@ ark-curve-constraint-tests = { git = "https://github.com/paritytech/ark-substrat
 ark-ec = { version = "0.4.2", default-features = false }
 sp-ark-models = { git = "https://github.com/paritytech/ark-substrate.git",  default-features = false }
 codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
-ark-scale = { git = "https://github.com/w3f/ark-scale", version = "0.0.2", features = ["hazmat"], default-features = false }
+ark-scale = { version = "0.0.3", features = ["hazmat"], default-features = false }
 
 [features]
 default = [ "std" ]
