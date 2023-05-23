@@ -13,6 +13,6 @@ rectangle "ark-substrate" {
 rectangle "<b>substrate-curves</b>" as sp_curves
 
 (sp-ark-curves) ..> (sp-crypto-ec-utils)
-sp_curves ==> (sp-crypto-ec-utils)
+sp_curves ==> (sp-ark-curves)
 (sp-ark-curves)==> (sp-ark-models) 
 (ring-vrf) --> (sp-ark-curves)
