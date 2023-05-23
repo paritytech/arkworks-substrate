@@ -1,0 +1,21 @@
+skinparam ranksep 80
+skinparam dpi 125
+skinparam packageTitleAlignment center
+
+rectangle "Substrate" {
+  (ring-vrf)
+  (sp-crypto-ec-utils)
+}
+rectangle "ark-substrate" {
+  (sp-ark-curves)
+  (sp-ark-models)
+}
+rectangle "substrate-curves" {
+   (substrate-ark-curves)
+}
+
+(substrate-ark-curves) --> (sp-crypto-ec-utils)
+(substrate-ark-curves) --> (sp-ark-curves)
+(sp-ark-curves) --> (sp-ark-models) 
+(ring-vrf)--> (sp-ark-curves)
+(sp-ark-curves) ..> (sp-crypto-ec-utils)
