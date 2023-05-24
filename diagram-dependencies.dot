@@ -11,11 +11,11 @@ rectangle "ark-substrate" {
   (sp-ark-models)
 }
 rectangle "substrate-curves" {
-   (substrate-ark-curves)
+   (sp-curves)
 }
 
-(substrate-ark-curves) --> (sp-crypto-ec-utils)
-(substrate-ark-curves) --> (sp-ark-curves)
+(sp-curves) --> (sp-crypto-ec-utils)
+(sp-curves) --> (sp-ark-curves)
 (sp-ark-curves) --> (sp-ark-models) 
 (ring-vrf)--> (sp-ark-curves)
 (sp-ark-curves) ..> (sp-crypto-ec-utils)
