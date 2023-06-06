@@ -2,7 +2,7 @@
 name = "sp-ed-on-bls12-377"
 version = "0.4.0-alpha"
 authors = ["Parity Technologies <admin@parity.io>", "Achim Schneider <achim@parity.io>", "arkworks contributors" ]
-repository = "https://github.com/paritytech/ark-substrate"
+repository = "https://github.com/paritytech/substrate-curves"
 description = "A Twisted Edwards curve defined over the scalar field of the BLS12-377 curve, optimized for Substrate"
 keywords = ["cryptography", "finite-fields", "elliptic-curves", "substrate" ]
 categories = ["cryptography"]
@@ -14,7 +14,7 @@ publish = true
 [dependencies]
 sp-ark-ed-on-bls12-377 = { git = "https://github.com/paritytech/ark-substrate.git", default-features = false }
 ark-r1cs-std = { version = "0.4.0", default-features = false, optional = true }
-sp-crypto-ec-utils =  { git = "https://github.com/paritytech/substrate.git", "branch" = "achimcc/arkworks-integration", version = "0.4.0",  default-features = false, features = ["ec-utils-experimental"] }
+sp-crypto-ec-utils =  { git = "https://github.com/paritytech/substrate.git", version = "0.4.0",  default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
 
 [dev-dependencies]
