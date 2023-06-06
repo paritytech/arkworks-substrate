@@ -3,7 +3,7 @@ name: Check Set-Up & Build
 on:
   push:
     branches:    
-      - '*'
+      - 'main'
   pull_request:
     branches: 
 
