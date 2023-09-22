@@ -3,9 +3,7 @@
 members = [
     "bls12_377",
     "ed_on_bls12_377",
-
     "bw6_761",
-
     "bls12_381",
     "ed_on_bls12_381_bandersnatch",
 ]
