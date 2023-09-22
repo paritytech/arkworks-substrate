@@ -12,9 +12,9 @@ edition = "2021"
 publish = true
 
 [dependencies]
-sp-ark-ed-on-bls12-377 = { git = "https://github.com/paritytech/ark-substrate.git", default-features = false }
+sp-ark-ed-on-bls12-377 = { git = "https://github.com/paritytech/ark-substrate", default-features = false }
 ark-r1cs-std = { version = "0.4.0", default-features = false, optional = true }
-sp-crypto-ec-utils =  { git = "https://github.com/paritytech/substrate.git", version = "0.4.0",  default-features = false }
+sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
 
 [dev-dependencies]
@@ -22,9 +22,9 @@ ark-ff = { version = "0.4.2", default-features = false }
 ark-serialize = { version = "0.4.2", default-features = false }
 ark-relations = { version = "0.4.0", default-features = false }
 ark-algebra-test-templates = { version = "0.4.2", default-features = false }
-ark-curve-constraint-tests = { git = "https://github.com/paritytech/ark-substrate.git", default-features = false }
+ark-curve-constraint-tests = { git = "https://github.com/paritytech/ark-substrate", default-features = false }
 ark-ec = { version = "0.4.2", default-features = false }
-sp-ark-models = { git = "https://github.com/paritytech/ark-substrate.git",  default-features = false }
+sp-ark-models = { git = "https://github.com/paritytech/ark-substrate",  default-features = false }
 codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
 ark-scale = { version = "0.0.3", features = ["hazmat"], default-features = false }
 

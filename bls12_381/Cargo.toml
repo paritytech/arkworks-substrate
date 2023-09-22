@@ -12,9 +12,9 @@ edition = "2021"
 publish = true
 
 [dependencies]
-sp-ark-bls12-381 = { git = "https://github.com/paritytech/ark-substrate.git", features = ["curve"], default-features = false }
-sp-crypto-ec-utils =  { git = "https://github.com/paritytech/substrate.git", version = "0.4.0",  default-features = false }
-sp-ark-models = { git = "https://github.com/paritytech/ark-substrate.git",  default-features = false }
+sp-ark-bls12-381 = { git = "https://github.com/paritytech/ark-substrate", features = ["curve"], default-features = false }
+sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", default-features = false }
+sp-ark-models = { git = "https://github.com/paritytech/ark-substrate",  default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
 
 [dev-dependencies] 
