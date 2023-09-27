@@ -24,7 +24,7 @@ ark-algebra-test-templates = { version = "0.4.2", default-features = false }
 ark-curve-constraint-tests = { git = "https://github.com/paritytech/ark-substrate", default-features = false }
 ark-serialize = { version = "0.4.2", default-features = false }
 codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
-ark-scale = { version = "0.0.3", features = ["hazmat"], default-features = false }
+ark-scale = { version = "0.0.11", features = ["hazmat"], default-features = false }
 sp-ark-models = { git = "https://github.com/paritytech/ark-substrate",  default-features = false }
 
 [features]
