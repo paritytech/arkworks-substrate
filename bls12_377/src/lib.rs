@@ -8,7 +8,7 @@ pub use sp_ark_bls12_377::{
 };
 use sp_ark_bls12_377::{Bls12_377 as Bls12_377Host, HostFunctions};
 
-#[derive(PartialEq, Eq)]
+#[derive(Copy, Clone)]
 pub struct Host;
 
 impl HostFunctions for Host {

@@ -10,7 +10,7 @@ pub use sp_ark_bls12_381::{
     fq, fq::*, fq12, fq12::*, fq2, fq2::*, fq6, fq6::*, fr, fr::*, HostFunctions,
 };
 
-#[derive(PartialEq, Eq)]
+#[derive(Copy, Clone)]
 pub struct Host;
 
 impl HostFunctions for Host {

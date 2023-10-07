@@ -8,7 +8,8 @@ use ark_std::vec::Vec;
 pub use curves::*;
 pub use sp_ark_ed_on_bls12_381_bandersnatch::{fq, fq::*, fr, fr::*, HostFunctions};
 
-pub struct Host {}
+#[derive(Copy, Clone)]
+pub struct Host;
 
 impl HostFunctions for Host {
     fn ed_on_bls12_381_bandersnatch_te_msm(
