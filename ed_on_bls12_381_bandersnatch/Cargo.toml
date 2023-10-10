@@ -22,7 +22,6 @@ ark-ff = { version = "0.4.2", default-features = false }
 ark-relations = { version = "0.4.0", default-features = false }
 ark-serialize = { version = "0.4.2", default-features = false }
 ark-algebra-test-templates = { version = "0.4.2", default-features = false }
-ark-curve-constraint-tests = { git = "https://github.com/paritytech/ark-substrate", default-features = false }
 sp-ark-models = { git = "https://github.com/paritytech/ark-substrate",  default-features = false }
 codec = { package = "parity-scale-codec", version = "3.2.2", default-features = false }
 ark-scale = { version = "0.0.11", features = ["hazmat"], default-features = false }
@@ -31,14 +30,14 @@ ark-ec = { version = "0.4.2", default-features = false }
 [features]
 default = ["std"]
 std = [
-    "ark-ff/std",
-    "ark-std/std",
-    "ark-r1cs-std/std",
-    "sp-ark-bls12-381/std",
-    "sp-ark-models/std", 
-    "codec/std",
-    "ark-scale/std",
-    "sp-ark-ed-on-bls12-381-bandersnatch/std",
-    "sp-crypto-ec-utils/std", 
+  "ark-ff/std",
+  "ark-std/std",
+  "ark-r1cs-std/std",
+  "sp-ark-bls12-381/std",
+  "sp-ark-models/std", 
+  "codec/std",
+  "ark-scale/std",
+  "sp-ark-ed-on-bls12-381-bandersnatch/std",
+  "sp-crypto-ec-utils/std", 
 ]
 r1cs = ["ark-r1cs-std"]

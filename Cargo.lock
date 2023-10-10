@@ -127,19 +127,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ark-curve-constraint-tests"
-version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
-dependencies = [
- "ark-ff",
- "ark-r1cs-std",
- "ark-relations",
- "ark-serialize",
- "ark-std",
- "sp-ark-models",
-]
-
-[[package]]
 name = "ark-ec"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1318,7 +1305,6 @@ name = "sp-bls12-377"
 version = "0.4.0-alpha"
 dependencies = [
  "ark-algebra-test-templates",
- "ark-curve-constraint-tests",
  "ark-ec",
  "ark-ff",
  "ark-relations",
@@ -1399,7 +1385,6 @@ name = "sp-ed-on-bls12-377"
 version = "0.4.0-alpha"
 dependencies = [
  "ark-algebra-test-templates",
- "ark-curve-constraint-tests",
  "ark-ec",
  "ark-ff",
  "ark-r1cs-std",
@@ -1418,7 +1403,6 @@ name = "sp-ed-on-bls12-381-bandersnatch"
 version = "0.4.0-alpha"
 dependencies = [
  "ark-algebra-test-templates",
- "ark-curve-constraint-tests",
  "ark-ec",
  "ark-ff",
  "ark-r1cs-std",
