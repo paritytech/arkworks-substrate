@@ -596,10 +596,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be4136b2a15dd319360be1c07d9933517ccf0be8f16bf62a3bee4f0d618df427"
 dependencies = [
  "cfg-if",
- "js-sys",
  "libc",
  "wasi",
- "wasm-bindgen",
 ]
 
 [[package]]
@@ -1215,63 +1213,52 @@ checksum = "942b4a808e05215192e39f4ab80813e599068285906cc91aa64f923db842bd5a"
 [[package]]
 name = "sp-ark-bls12-377"
 version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
 dependencies = [
  "ark-bls12-377",
  "ark-ff",
  "ark-r1cs-std",
  "ark-scale 0.0.11",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-models",
 ]
 
 [[package]]
 name = "sp-ark-bls12-381"
 version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
 dependencies = [
  "ark-bls12-381",
  "ark-ff",
  "ark-scale 0.0.11",
- "ark-serialize",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-models",
 ]
 
 [[package]]
 name = "sp-ark-bw6-761"
 version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
 dependencies = [
  "ark-bw6-761",
  "ark-ff",
  "ark-scale 0.0.11",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-models",
 ]
 
 [[package]]
 name = "sp-ark-ed-on-bls12-377"
 version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
 dependencies = [
  "ark-ed-on-bls12-377",
  "ark-ff",
  "ark-r1cs-std",
  "ark-scale 0.0.11",
- "ark-serialize",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-models",
 ]
 
 [[package]]
 name = "sp-ark-ed-on-bls12-381-bandersnatch"
 version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
 dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-381-bandersnatch",
@@ -1279,25 +1266,20 @@ dependencies = [
  "ark-r1cs-std",
  "ark-scale 0.0.11",
  "ark-std",
- "parity-scale-codec",
- "sp-ark-bls12-381",
  "sp-ark-models",
 ]
 
 [[package]]
 name = "sp-ark-models"
 version = "0.4.1-beta"
-source = "git+https://github.com/paritytech/ark-substrate#5447299dbd28c134f949aeef7f9981bfc3b65a1f"
 dependencies = [
  "ark-ec",
  "ark-ff",
  "ark-serialize",
  "ark-std",
  "derivative",
- "getrandom",
  "itertools",
  "num-traits",
- "zeroize",
 ]
 
 [[package]]
@@ -1307,28 +1289,21 @@ dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
  "ark-ff",
- "ark-relations",
- "ark-scale 0.0.11",
  "ark-serialize",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-bls12-377",
- "sp-ark-models",
  "sp-crypto-ec-utils",
 ]
 
 [[package]]
 name = "sp-bls12-381"
-version = "0.4.0-alpha"
+version = "0.4.1-alpha"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
  "ark-ff",
- "ark-scale 0.0.11",
  "ark-serialize",
  "ark-std",
- "hex",
- "parity-scale-codec",
  "sp-ark-bls12-381",
  "sp-ark-models",
  "sp-crypto-ec-utils",
@@ -1341,10 +1316,8 @@ dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
  "ark-ff",
- "ark-scale 0.0.11",
  "ark-serialize",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-bw6-761",
  "sp-ark-models",
  "sp-crypto-ec-utils",
@@ -1387,14 +1360,9 @@ dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
  "ark-ff",
- "ark-r1cs-std",
- "ark-relations",
- "ark-scale 0.0.11",
  "ark-serialize",
  "ark-std",
- "parity-scale-codec",
  "sp-ark-ed-on-bls12-377",
- "sp-ark-models",
  "sp-crypto-ec-utils",
 ]
 
@@ -1405,15 +1373,9 @@ dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
  "ark-ff",
- "ark-r1cs-std",
- "ark-relations",
- "ark-scale 0.0.11",
  "ark-serialize",
  "ark-std",
- "parity-scale-codec",
- "sp-ark-bls12-381",
  "sp-ark-ed-on-bls12-381-bandersnatch",
- "sp-ark-models",
  "sp-crypto-ec-utils",
 ]
 

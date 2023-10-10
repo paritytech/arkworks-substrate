@@ -1,4 +1,3 @@
-#![cfg_attr(not(feature = "std"), no_std)]
 use ark_algebra_test_templates::*;
 use ark_ff::{fields::Field, One, Zero};
 use ark_serialize::{CanonicalDeserialize, CanonicalSerialize, Compress, Validate};

@@ -1,4 +1,5 @@
 #![cfg_attr(not(feature = "std"), no_std)]
+
 pub mod curves;
 
 #[cfg(feature = "r1cs")]
