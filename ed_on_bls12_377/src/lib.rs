@@ -1,9 +1,10 @@
 #![cfg_attr(not(feature = "std"), no_std)]
-use sp_ark_ed_on_bls12_377::HostFunctions;
+
+use sp_ark_ed_on_bls12_377::CurveHooks;
 pub mod curves;
 
 #[cfg(feature = "r1cs")]
-pub use sp_ark_ed_on_bls12_377::constraints::*;
+pub use sp_ark_ed_on_bls12_377::constraints;
 
 use ark_std::vec::Vec;
 pub use curves::*;
@@ -12,7 +13,7 @@ pub use sp_ark_ed_on_bls12_377::{fq, fq::*, fr, fr::*};
 #[derive(Copy, Clone)]
 pub struct Host;
 
-impl HostFunctions for Host {
+impl CurveHooks for Host {
     fn ed_on_bls12_377_msm(bases: Vec<u8>, scalars: Vec<u8>) -> Result<Vec<u8>, ()> {
         sp_crypto_ec_utils::elliptic_curves::ed_on_bls12_377_msm(bases, scalars)
     }

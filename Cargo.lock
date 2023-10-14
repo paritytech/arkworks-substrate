@@ -224,35 +224,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ark-r1cs-std"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de1d1472e5cb020cb3405ce2567c91c8d43f21b674aef37b0202f5c3304761db"
-dependencies = [
- "ark-ec",
- "ark-ff",
- "ark-relations",
- "ark-std",
- "derivative",
- "num-bigint",
- "num-integer",
- "num-traits",
- "tracing",
-]
-
-[[package]]
-name = "ark-relations"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "00796b6efc05a3f48225e59cb6a2cda78881e7c390872d5786aaf112f31fb4f0"
-dependencies = [
- "ark-ff",
- "ark-std",
- "tracing",
- "tracing-subscriber",
-]
-
-[[package]]
 name = "ark-scale"
 version = "0.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1213,10 +1184,11 @@ checksum = "942b4a808e05215192e39f4ab80813e599068285906cc91aa64f923db842bd5a"
 [[package]]
 name = "sp-ark-bls12-377"
 version = "0.4.1-beta"
+source = "git+https://github.com/paritytech/ark-substrate#67aade3888c27b4269c0c23d07e605e48714a144"
 dependencies = [
  "ark-bls12-377",
+ "ark-ec",
  "ark-ff",
- "ark-r1cs-std",
  "ark-scale 0.0.11",
  "ark-std",
  "sp-ark-models",
@@ -1225,8 +1197,10 @@ dependencies = [
 [[package]]
 name = "sp-ark-bls12-381"
 version = "0.4.1-beta"
+source = "git+https://github.com/paritytech/ark-substrate#67aade3888c27b4269c0c23d07e605e48714a144"
 dependencies = [
  "ark-bls12-381",
+ "ark-ec",
  "ark-ff",
  "ark-scale 0.0.11",
  "ark-std",
@@ -1236,8 +1210,10 @@ dependencies = [
 [[package]]
 name = "sp-ark-bw6-761"
 version = "0.4.1-beta"
+source = "git+https://github.com/paritytech/ark-substrate#67aade3888c27b4269c0c23d07e605e48714a144"
 dependencies = [
  "ark-bw6-761",
+ "ark-ec",
  "ark-ff",
  "ark-scale 0.0.11",
  "ark-std",
@@ -1247,10 +1223,11 @@ dependencies = [
 [[package]]
 name = "sp-ark-ed-on-bls12-377"
 version = "0.4.1-beta"
+source = "git+https://github.com/paritytech/ark-substrate#67aade3888c27b4269c0c23d07e605e48714a144"
 dependencies = [
+ "ark-ec",
  "ark-ed-on-bls12-377",
  "ark-ff",
- "ark-r1cs-std",
  "ark-scale 0.0.11",
  "ark-std",
  "sp-ark-models",
@@ -1259,11 +1236,11 @@ dependencies = [
 [[package]]
 name = "sp-ark-ed-on-bls12-381-bandersnatch"
 version = "0.4.1-beta"
+source = "git+https://github.com/paritytech/ark-substrate#67aade3888c27b4269c0c23d07e605e48714a144"
 dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-381-bandersnatch",
  "ark-ff",
- "ark-r1cs-std",
  "ark-scale 0.0.11",
  "ark-std",
  "sp-ark-models",
@@ -1272,13 +1249,13 @@ dependencies = [
 [[package]]
 name = "sp-ark-models"
 version = "0.4.1-beta"
+source = "git+https://github.com/paritytech/ark-substrate#67aade3888c27b4269c0c23d07e605e48714a144"
 dependencies = [
  "ark-ec",
  "ark-ff",
  "ark-serialize",
  "ark-std",
  "derivative",
- "itertools",
  "num-traits",
 ]
 
@@ -1579,19 +1556,7 @@ checksum = "8ce8c33a8d48bd45d624a6e523445fd21ec13d3653cd51f681abf67418f54eb8"
 dependencies = [
  "cfg-if",
  "pin-project-lite",
- "tracing-attributes",
  "tracing-core",
-]
-
-[[package]]
-name = "tracing-attributes"
-version = "0.1.26"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f4f31f56159e98206da9efd823404b79b6ef3143b4a7ab76e67b1751b25a4ab"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.37",
 ]
 
 [[package]]

@@ -1,14 +1,15 @@
 #![cfg_attr(not(feature = "std"), no_std)]
+
 pub mod curves;
 
 use ark_std::vec::Vec;
 pub use curves::*;
-pub use sp_ark_bw6_761::{fq, fq::*, fq3, fq3::*, fq6, fq6::*, fr, fr::*, HostFunctions};
+pub use sp_ark_bw6_761::{fq, fq::*, fq3, fq3::*, fq6, fq6::*, fr, fr::*, CurveHooks};
 
-#[derive(PartialEq, Eq)]
+#[derive(Copy, Clone)]
 pub struct Host;
 
-impl HostFunctions for Host {
+impl CurveHooks for Host {
     fn bw6_761_multi_miller_loop(a: Vec<u8>, b: Vec<u8>) -> Result<Vec<u8>, ()> {
         sp_crypto_ec_utils::elliptic_curves::bw6_761_multi_miller_loop(a, b)
     }

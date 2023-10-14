@@ -11,7 +11,7 @@ license = "MIT/Apache-2.0"
 edition = "2021"
 
 [dependencies]
-sp-ark-bls12-377 = { git = "https://github.com/paritytech/ark-substrate",  default-features = false, features = ["curve", "scale-fast"] }
+sp-ark-bls12-377 = { git = "https://github.com/paritytech/ark-substrate",  default-features = false, features = ["scale-fast"] }
 sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
 
@@ -27,4 +27,8 @@ std = [
   "sp-ark-bls12-377/std",
   "sp-crypto-ec-utils/std",
   "ark-std/std", 
+  "ark-ff/std",
+  "ark-ec/std",
+  "ark-algebra-test-templates/std",
+  "ark-serialize/std",
 ]

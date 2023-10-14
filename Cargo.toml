@@ -32,6 +32,3 @@ lto = "thin"
 incremental = true
 debug-assertions = true
 debug = true
-
-# [patch."https://github.com/paritytech/polkadot-sdk"]
-# fflonk = { path = "/home/davxy/develop/partity/ark-substrate" }
