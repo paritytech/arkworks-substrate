@@ -1,13 +1,12 @@
 [workspace]
-
-members = [
-    "bls12_377",
-    "ed_on_bls12_377",
-    "bw6_761",
-    "bls12_381",
-    "ed_on_bls12_381_bandersnatch",
-]
 resolver = "2"
+members = [
+  "bls12_377",
+  "ed_on_bls12_377",
+  "bw6_761",
+  "bls12_381",
+  "ed_on_bls12_381_bandersnatch",
+]
 
 [profile.release]
 opt-level = 3

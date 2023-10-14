@@ -1,4 +1,5 @@
 #![cfg_attr(not(feature = "std"), no_std)]
+
 pub mod curves;
 
 #[cfg(feature = "r1cs")]
@@ -7,13 +8,13 @@ pub use ark_bls12_381::constraints::*;
 use ark_std::vec::Vec;
 pub use curves::*;
 pub use sp_ark_bls12_381::{
-    fq, fq::*, fq12, fq12::*, fq2, fq2::*, fq6, fq6::*, fr, fr::*, HostFunctions,
+    fq, fq::*, fq12, fq12::*, fq2, fq2::*, fq6, fq6::*, fr, fr::*, CurveHooks,
 };
 
 #[derive(Copy, Clone)]
 pub struct Host;
 
-impl HostFunctions for Host {
+impl CurveHooks for Host {
     fn bls12_381_multi_miller_loop(a: Vec<u8>, b: Vec<u8>) -> Result<Vec<u8>, ()> {
         sp_crypto_ec_utils::elliptic_curves::bls12_381_multi_miller_loop(a, b)
     }

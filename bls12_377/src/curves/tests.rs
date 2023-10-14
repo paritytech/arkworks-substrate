@@ -1,4 +1,3 @@
-#![cfg_attr(not(feature = "std"), no_std)]
 use crate::{Bls12_377, G1Projective, G2Projective};
 use ark_algebra_test_templates::*;
 

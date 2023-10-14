@@ -1,4 +1,4 @@
-use sp_ark_bls12_381::curves::g2::{
+use sp_ark_bls12_381::g2::{
     Config as ConfigHost, G2Affine as G2AffineHost, G2Projective as G2ProjectiveHost,
 };
 
