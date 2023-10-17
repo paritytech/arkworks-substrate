@@ -23,12 +23,12 @@ ark-algebra-test-templates.workspace = true
 
 [features]
 default = [ "std" ]
-std = [ 
+std = [
+  "ark-algebra-test-templates/std",
+  "ark-ec/std",
+  "ark-ff/std",
+  "ark-serialize/std",
+  "ark-std/std",
   "sp-ark-bls12-377/std",
   "sp-crypto-ec-utils/std",
-  "ark-std/std", 
-  "ark-ff/std",
-  "ark-ec/std",
-  "ark-algebra-test-templates/std",
-  "ark-serialize/std",
 ]

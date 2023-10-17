@@ -22,9 +22,9 @@ ark-algebra-test-templates.workspace = true
 ark-ec.workspace = true
 
 [features]
-default = ["std"]
+default = [ "std" ]
 std = [
   "ark-std/std",
   "sp-ark-ed-on-bls12-381-bandersnatch/std",
-  "sp-crypto-ec-utils/std", 
+  "sp-crypto-ec-utils/std",
 ]
