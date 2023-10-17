@@ -225,19 +225,6 @@ dependencies = [
 
 [[package]]
 name = "ark-scale"
-version = "0.0.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "49b08346a3e38e2be792ef53ee168623c9244d968ff00cd70fb9932f6fe36393"
-dependencies = [
- "ark-ec",
- "ark-ff",
- "ark-serialize",
- "ark-std",
- "parity-scale-codec",
-]
-
-[[package]]
-name = "ark-scale"
 version = "0.0.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "51bd73bb6ddb72630987d37fa963e99196896c0d0ea81b7c894567e74a2f83af"
@@ -1005,7 +992,7 @@ checksum = "7f7473c2cfcf90008193dd0e3e16599455cb601a9fce322b5bb55de799664925"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
 ]
 
 [[package]]
@@ -1141,7 +1128,7 @@ checksum = "4eca7ac642d82aa35b60049a6eccb4be6be75e599bd2e9adb5f875a737654af2"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
 ]
 
 [[package]]
@@ -1189,7 +1176,7 @@ dependencies = [
  "ark-bls12-377",
  "ark-ec",
  "ark-ff",
- "ark-scale 0.0.11",
+ "ark-scale",
  "ark-std",
  "sp-ark-models",
 ]
@@ -1202,7 +1189,7 @@ dependencies = [
  "ark-bls12-381",
  "ark-ec",
  "ark-ff",
- "ark-scale 0.0.11",
+ "ark-scale",
  "ark-std",
  "sp-ark-models",
 ]
@@ -1215,7 +1202,7 @@ dependencies = [
  "ark-bw6-761",
  "ark-ec",
  "ark-ff",
- "ark-scale 0.0.11",
+ "ark-scale",
  "ark-std",
  "sp-ark-models",
 ]
@@ -1228,7 +1215,7 @@ dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-377",
  "ark-ff",
- "ark-scale 0.0.11",
+ "ark-scale",
  "ark-std",
  "sp-ark-models",
 ]
@@ -1241,7 +1228,7 @@ dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-381-bandersnatch",
  "ark-ff",
- "ark-scale 0.0.11",
+ "ark-scale",
  "ark-std",
  "sp-ark-models",
 ]
@@ -1261,7 +1248,7 @@ dependencies = [
 
 [[package]]
 name = "sp-bls12-377"
-version = "0.4.0-alpha"
+version = "0.4.1-beta"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
@@ -1274,7 +1261,7 @@ dependencies = [
 
 [[package]]
 name = "sp-bls12-381"
-version = "0.4.1-alpha"
+version = "0.4.1-beta"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
@@ -1282,13 +1269,12 @@ dependencies = [
  "ark-serialize",
  "ark-std",
  "sp-ark-bls12-381",
- "sp-ark-models",
  "sp-crypto-ec-utils",
 ]
 
 [[package]]
 name = "sp-bw6-761"
-version = "0.4.0-alpha"
+version = "0.4.1-beta"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
@@ -1296,14 +1282,13 @@ dependencies = [
  "ark-serialize",
  "ark-std",
  "sp-ark-bw6-761",
- "sp-ark-models",
  "sp-crypto-ec-utils",
 ]
 
 [[package]]
 name = "sp-crypto-ec-utils"
 version = "0.4.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "ark-bls12-377",
  "ark-bls12-381",
@@ -1311,11 +1296,7 @@ dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-377",
  "ark-ed-on-bls12-381-bandersnatch",
- "ark-ff",
- "ark-scale 0.0.10",
- "ark-serialize",
- "ark-std",
- "parity-scale-codec",
+ "ark-scale",
  "sp-runtime-interface",
  "sp-std",
 ]
@@ -1323,16 +1304,16 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "8.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
 ]
 
 [[package]]
 name = "sp-ed-on-bls12-377"
-version = "0.4.0-alpha"
+version = "0.4.1-beta"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
@@ -1345,7 +1326,7 @@ dependencies = [
 
 [[package]]
 name = "sp-ed-on-bls12-381-bandersnatch"
-version = "0.4.0-alpha"
+version = "0.4.1-beta"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-ec",
@@ -1359,7 +1340,7 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.19.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "environmental",
  "parity-scale-codec",
@@ -1370,7 +1351,7 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface"
 version = "17.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "bytes",
  "impl-trait-for-tuples",
@@ -1388,24 +1369,24 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface-proc-macro"
 version = "11.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "Inflector",
  "proc-macro-crate",
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
 ]
 
 [[package]]
 name = "sp-std"
 version = "8.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 
 [[package]]
 name = "sp-storage"
 version = "13.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "impl-serde",
  "parity-scale-codec",
@@ -1418,7 +1399,7 @@ dependencies = [
 [[package]]
 name = "sp-tracing"
 version = "10.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "parity-scale-codec",
  "sp-std",
@@ -1430,7 +1411,7 @@ dependencies = [
 [[package]]
 name = "sp-wasm-interface"
 version = "14.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#a846b7460465ddcb70450359b0c92a1be59afb2f"
+source = "git+https://github.com/paritytech/polkadot-sdk#e10de2e2839f2b6e9c16f64df57829a6c462fe28"
 dependencies = [
  "anyhow",
  "impl-trait-for-tuples",
@@ -1465,9 +1446,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.37"
+version = "2.0.38"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7303ef2c05cd654186cb250d29049a24840ca25d2747c25c0381c8d9e2f582e8"
+checksum = "e96b79aaa137db8f61e26363a0c9b47d8b4ec75da28b7d1d614c2303e232408b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1503,7 +1484,7 @@ checksum = "10712f02019e9288794769fba95cd6847df9874d49d871d062172f9dd41bc4cc"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
 ]
 
 [[package]]
@@ -1701,7 +1682,7 @@ dependencies = [
  "once_cell",
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
  "wasm-bindgen-shared",
 ]
 
@@ -1723,7 +1704,7 @@ checksum = "54681b18a46765f095758388f2d0cf16eb8d4169b639ab575a8f5693af210c7b"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -2074,5 +2055,5 @@ checksum = "ce36e65b0d2999d2aafac989fb249189a141aee1f53c612c1f37d72631959f69"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.37",
+ "syn 2.0.38",
 ]

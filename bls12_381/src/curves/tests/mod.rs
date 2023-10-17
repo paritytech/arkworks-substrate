@@ -1,8 +1,8 @@
 use ark_algebra_test_templates::*;
+use ark_ec::{pairing::PairingOutput, AffineRepr, CurveGroup, Group};
 use ark_ff::{fields::Field, One, Zero};
 use ark_serialize::{CanonicalDeserialize, CanonicalSerialize, Compress, Validate};
 use ark_std::{rand::Rng, test_rng, vec, UniformRand};
-use sp_ark_models::{pairing::PairingOutput, AffineRepr, CurveGroup, Group};
 
 use crate::{
     curves::{Bls12_381, G1Affine, G1Projective, G2Affine, G2Projective},

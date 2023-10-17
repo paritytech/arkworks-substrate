@@ -1,25 +1,25 @@
 [package]
 name = "sp-ed-on-bls12-381-bandersnatch"
-version = "0.4.0-alpha"
-authors = [ "zhenfei zhang", "arkworks contributors" ]
 description = "Bandersnatch: a curve defined over the scalar field of the BLS12-381 curve"
-repository = "https://github.com/zhenfeizhang/bandersnatch-rust"
-keywords = ["cryptography", "finite-fields", "elliptic-curves" ]
-categories = ["cryptography"]
-include = ["Cargo.toml", "src", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
-license = "MIT/Apache-2.0"
-edition = "2021"
+version.workspace = true
+authors.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+include.workspace = true
+license.workspace = true
+edition.workspace = true
 
 [dependencies]
-sp-ark-ed-on-bls12-381-bandersnatch = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
-sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", default-features = false }
-ark-std = { version = "0.4.0", default-features = false }
+sp-ark-ed-on-bls12-381-bandersnatch.workspace = true
+ark-std.workspace = true
+sp-crypto-ec-utils.workspace = true
 
 [dev-dependencies]
-ark-ff = { version = "0.4.2", default-features = false }
-ark-serialize = { version = "0.4.2", default-features = false }
-ark-algebra-test-templates = { version = "0.4.2", default-features = false }
-ark-ec = { version = "0.4.2", default-features = false }
+ark-ff.workspace = true
+ark-serialize.workspace = true
+ark-algebra-test-templates.workspace = true
+ark-ec.workspace = true
 
 [features]
 default = ["std"]
