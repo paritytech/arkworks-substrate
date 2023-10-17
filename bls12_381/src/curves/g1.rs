@@ -1,9 +1,8 @@
-use sp_ark_bls12_381::g1::Config as ConfigHost;
+use ark_ec::short_weierstrass::Affine;
 use sp_ark_bls12_381::{
-    g1::endomorphism as endomorphism_host, G1Affine as G1AffineHost,
-    G1Projective as G1ProjectiveHost,
+    g1::{endomorphism as endomorphism_host, Config as ConfigHost},
+    G1Affine as G1AffineHost, G1Projective as G1ProjectiveHost,
 };
-use sp_ark_models::short_weierstrass::Affine;
 
 pub type Config = ConfigHost<crate::Host>;
 
