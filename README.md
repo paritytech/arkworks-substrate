@@ -1,17 +1,7 @@
-# sustrate-curves
+# Arkworks Sustrate Extensions
 
-Elliptic curves to be used in the [Substrate](https://github.com/paritytech/substrate) runtime.
-
-## Introduction
-
-[ark-curves](https://github.com/arkworks-rs/curves) a library which is a partial fork of [ark-curves](https://github.com/arkworks-rs/curves) and the corresponding models from [ark-algebra](https://github.com/arkworks-rs/algebra). We provide there implementations of the elliptic curves `BLS12_381`, `BLS12_377`, `BW6_761`, `ED_on_BLS12_377` and `ED_ON_BLS12_381_BANDERSNATCH`, where we replace the operations which are slow in the Substrate WebAssembly runtime by host function calls which are provided by Substrate. Those operations are multi miller loop and final exponentiations (which are usually composed to compute the bilinear pairing between two elliptic curve points), multi scalar multiplications and projective multiplications. The affine multiplications are handled by a conversion into projective points and subsequently calling into the host functions for projective multiplications.
-
-While we are providing the elliptic curves in [ark-substrate](https://github.com/paritytech/ark-substrate), we require this additional library to provide "ready to go" elliptic curve which are instantiated with the Substrate host functions. This is neccessary, since we plan to re-use [ark-substrate](https://github.com/paritytech/ark-substrate) in Substrate itself internally for a future implementation of Ring VRFs, which are an important building block of the new Substrate consensus mechanism Sassafrass. Therefore we can't instantiate the curves in [ark-substrate](https://github.com/paritytech/ark-substrate) directly with the Substrate host functions without causing cyclic workspace dependencies between Substrate and [ark-substrate](https://github.com/paritytech/ark-substrate).
-
-The dependencies are represented by the following diagram:
-
-![](diagram-dependencies.png)
-Dependency Diagram
+Specializations of the crates defined in [arkworks-ext](https://github.com/paritytech/ark-substrate)
+ready to be used in the [Substrate](https://github.com/paritytech/substrate) runtime.
 
 ## Benchmark results
 
@@ -58,13 +48,14 @@ Dependency Diagram
 | ed_on_bls12_377_mul_projective                       |    179.54        |    32.72        |${\color{green}\bf 5.49 \boldsymbol{\times}}$|    9.72        |      24.07      |
 | ed_on_bls12_377_mul_affine                           |    177.53        |    33.24        |${\color{green}\bf 5.34 \boldsymbol{\times}}$|    9.76        |      23.90      |
 
-[^1]: implemented in a Substrate pallet with [arkworks](https://github.com/arkworks-rs/) library by this repo: https://github.com/achimcc/substrate-arkworks-examples
-[^2]: implemented in a Substrate pallet with [ark-substrate](https://github.com/paritytech/ark-substrate) library, executed through host-function call, computed by this repo: https://github.com/achimcc/substrate-arkworks-examples
-[^3]: speedup by using ark-substrate and host calls, compared to native speed
-[^4]: These extrinsics just receive the arguemnts, deserialize them without using them and then take a generator or zero element of the expected return group, serizlize it and return it. **Calling a host call through a extrinsic which does nothing has been benchmarked with 3.98µs**. Implementation in: https://github.com/achimcc/substrate-arkworks-examples/tree/dummy-calls
-[^5]: native execution, computed by this repo: https://github.com/achimcc/native-bench-arkworks
+[^1]: implemented in a Substrate pallet with [arkworks](https://github.com/arkworks-rs/) library.
+[^2]: implemented in a Substrate pallet with [ark-substrate](https://github.com/paritytech/ark-substrate) library.
+[^3]: speedup by using ark-substrate with host calls, compared to native speed.
+[^4]: These extrinsics just receive the arguments, deserialize them without using them and then take a generator
+      or zero element of the expected return group, serialize it and return it. 
+      **Calling a host call through an extrinsic which does nothing has been benchmarked with 3.98µs**.
+[^5]: native execution, computed by [this](https://github.com/achimcc/native-bench-arkworks) repo.
 
 ## Usage
 
-To speed-up your ZK-Apps on Substrate just replace any ark-substrate dependencies by sp-curve dependencies. See [substrate-arkworks-examples](https://github.com/achimcc/substrate-arkworks-examples) for example implementations.
-
+Refer to [ark-substrate-examples](https://github.com/davxy/ark-substrate-examples) for some insights.
