@@ -24,7 +24,7 @@ ark-ec.workspace = true
 [features]
 default = [ "std" ]
 std = [
-  "ark-std/std",
   "ark-ed-on-bls12-381-bandersnatch-ext/std",
+  "ark-std/std",
   "sp-crypto-ec-utils/std",
 ]
