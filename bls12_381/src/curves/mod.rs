@@ -1,4 +1,4 @@
-use sp_ark_bls12_381::{Bls12_381 as Bls12_381Host, Config as ConfigHost};
+use ark_bls12_381_ext::{Bls12_381 as Bls12_381Host, Config as ConfigHost};
 
 pub mod g1;
 pub mod g2;

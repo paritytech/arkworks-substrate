@@ -1,4 +1,4 @@
-use sp_ark_bw6_761::g1::{
+use ark_bw6_761_ext::g1::{
     Config as ConfigHost, G1Affine as G1AffineHost, G1Projective as G1ProjectiveHost,
 };
 
@@ -7,4 +7,4 @@ pub type G1Projective = G1ProjectiveHost<crate::Host>;
 
 pub type Config = ConfigHost<crate::Host>;
 
-pub use sp_ark_bw6_761::g1::{G1_GENERATOR_X, G1_GENERATOR_Y};
+pub use ark_bw6_761_ext::g1::{G1_GENERATOR_X, G1_GENERATOR_Y};

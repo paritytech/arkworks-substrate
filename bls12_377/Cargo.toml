@@ -11,7 +11,7 @@ license.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-ark-bls12-377.workspace = true
+ark-bls12-377-ext.workspace = true
 ark-std.workspace = true
 sp-crypto-ec-utils.workspace = true
 
@@ -29,6 +29,6 @@ std = [
   "ark-ff/std",
   "ark-serialize/std",
   "ark-std/std",
-  "sp-ark-bls12-377/std",
+  "ark-bls12-377-ext/std",
   "sp-crypto-ec-utils/std",
 ]

@@ -1,4 +1,4 @@
-use sp_ark_ed_on_bls12_381_bandersnatch::{
+use ark_ed_on_bls12_381_bandersnatch_ext::{
     BandersnatchConfig as BandersnatchConfigHost, EdwardsAffine as EdwardsAffineHost,
     EdwardsConfig as EdwardsConfigHost, EdwardsProjective as EdwardsProjectiveHost,
     SWAffine as SWAffineHost, SWConfig as SWConfigHost, SWProjective as SWProjectiveHost,

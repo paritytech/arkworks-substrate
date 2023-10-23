@@ -11,9 +11,9 @@
 
 pub mod curves;
 
+pub use ark_bw6_761_ext::{fq, fq::*, fq3, fq3::*, fq6, fq6::*, fr, fr::*, CurveHooks};
 use ark_std::vec::Vec;
 pub use curves::*;
-pub use sp_ark_bw6_761::{fq, fq::*, fq3, fq3::*, fq6, fq6::*, fr, fr::*, CurveHooks};
 
 #[derive(Copy, Clone)]
 pub struct Host;

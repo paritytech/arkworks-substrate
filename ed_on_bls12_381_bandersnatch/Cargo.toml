@@ -11,7 +11,7 @@ license.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-ark-ed-on-bls12-381-bandersnatch.workspace = true
+ark-ed-on-bls12-381-bandersnatch-ext.workspace = true
 ark-std.workspace = true
 sp-crypto-ec-utils.workspace = true
 
@@ -25,6 +25,6 @@ ark-ec.workspace = true
 default = [ "std" ]
 std = [
   "ark-std/std",
-  "sp-ark-ed-on-bls12-381-bandersnatch/std",
+  "ark-ed-on-bls12-381-bandersnatch-ext/std",
   "sp-crypto-ec-utils/std",
 ]

@@ -1,4 +1,4 @@
-use sp_ark_ed_on_bls12_377::{
+use ark_ed_on_bls12_377_ext::{
     EdwardsAffine as EdwardsAffineHost, EdwardsConfig as EdwardsConfigHost,
     EdwardsProjective as EdwardsProjectiveHost,
 };

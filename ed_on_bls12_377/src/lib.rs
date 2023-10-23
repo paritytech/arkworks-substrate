@@ -1,14 +1,14 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
-use sp_ark_ed_on_bls12_377::CurveHooks;
+use ark_ed_on_bls12_377_ext::CurveHooks;
 pub mod curves;
 
 #[cfg(feature = "r1cs")]
-pub use sp_ark_ed_on_bls12_377::constraints;
+pub use ark_ed_on_bls12_377_ext::constraints;
 
+pub use ark_ed_on_bls12_377_ext::{fq, fq::*, fr, fr::*};
 use ark_std::vec::Vec;
 pub use curves::*;
-pub use sp_ark_ed_on_bls12_377::{fq, fq::*, fr, fr::*};
 
 #[derive(Copy, Clone)]
 pub struct Host;

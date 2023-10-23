@@ -11,12 +11,12 @@
 
 pub mod curves;
 
-use ark_std::vec::Vec;
-pub use curves::*;
-pub use sp_ark_bls12_377::{
+pub use ark_bls12_377_ext::{
     fq12, fq2, fr, Fq, Fq12Config, Fq2, Fq2Config, Fq6Config, Fr, FrConfig,
 };
-use sp_ark_bls12_377::{Bls12_377 as Bls12_377Host, CurveHooks};
+use ark_bls12_377_ext::{Bls12_377 as Bls12_377Host, CurveHooks};
+use ark_std::vec::Vec;
+pub use curves::*;
 
 #[derive(Copy, Clone)]
 pub struct Host;

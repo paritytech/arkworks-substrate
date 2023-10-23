@@ -2,11 +2,11 @@
 pub mod curves;
 
 #[cfg(feature = "r1cs")]
-pub use sp_ark_ed_on_bls12_381_bandersnatch::constraints;
+pub use ark_ed_on_bls12_381_bandersnatch_ext::constraints;
 
+pub use ark_ed_on_bls12_381_bandersnatch_ext::{fq, fq::*, fr, fr::*, CurveHooks};
 use ark_std::vec::Vec;
 pub use curves::*;
-pub use sp_ark_ed_on_bls12_381_bandersnatch::{fq, fq::*, fr, fr::*, CurveHooks};
 
 #[derive(Copy, Clone)]
 pub struct Host;

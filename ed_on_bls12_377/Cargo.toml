@@ -11,7 +11,7 @@ license.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-ark-ed-on-bls12-377.workspace = true 
+ark-ed-on-bls12-377-ext.workspace = true 
 ark-std.workspace = true 
 sp-crypto-ec-utils.workspace = true
 
@@ -23,4 +23,4 @@ ark-ec.workspace = true
 
 [features]
 default = [ "std" ]
-std = [ "ark-std/std", "sp-ark-ed-on-bls12-377/std", "sp-crypto-ec-utils/std" ]
+std = [ "ark-std/std", "ark-ed-on-bls12-377-ext/std", "sp-crypto-ec-utils/std" ]

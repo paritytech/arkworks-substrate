@@ -25,11 +25,11 @@ edition = "2021"
 
 [workspace.dependencies]
 ark-std = { version = "0.4.0", default-features = false }
-sp-ark-bls12-377 = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
-sp-ark-bls12-381 = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
-sp-ark-bw6-761 = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
-sp-ark-ed-on-bls12-377 = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
-sp-ark-ed-on-bls12-381-bandersnatch = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
+ark-bls12-377-ext = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
+ark-bls12-381-ext = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
+ark-bw6-761-ext = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
+ark-ed-on-bls12-377-ext = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
+ark-ed-on-bls12-381-bandersnatch-ext = { git = "https://github.com/paritytech/ark-substrate", default-features = false, features = ["scale-fast"] }
 sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", default-features = false }
 ark-algebra-test-templates = { version = "0.4.2", default-features = false }
 ark-ff = { version = "0.4.2", default-features = false }

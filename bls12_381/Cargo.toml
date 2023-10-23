@@ -11,7 +11,7 @@ license.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-ark-bls12-381.workspace = true
+ark-bls12-381-ext.workspace = true
 ark-std.workspace = true
 sp-crypto-ec-utils.workspace = true
 ark-ec.workspace = true
@@ -23,4 +23,4 @@ ark-algebra-test-templates.workspace = true
 
 [features]
 default = [ "std" ]
-std = [ "ark-std/std", "sp-ark-bls12-381/std", "sp-crypto-ec-utils/std" ]
+std = [ "ark-std/std", "ark-bls12-381-ext/std", "sp-crypto-ec-utils/std" ]

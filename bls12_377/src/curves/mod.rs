@@ -1,6 +1,6 @@
 pub mod g1;
 pub mod g2;
-use sp_ark_bls12_377::Config as ConfigHost;
+use ark_bls12_377_ext::Config as ConfigHost;
 
 pub type Config = ConfigHost<crate::Host>;
 
