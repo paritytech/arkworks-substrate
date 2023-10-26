@@ -1,5 +1,6 @@
 use crate::curves::{g1::G1Projective, g2::G2Projective, BW6_761};
 use ark_algebra_test_templates::*;
+use ark_scale::ark_serialize;
 
 test_group!(g1; G1Projective; sw);
 test_group!(g2; G2Projective; sw);

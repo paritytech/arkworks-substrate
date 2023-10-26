@@ -105,13 +105,11 @@ dependencies = [
 [[package]]
 name = "ark-bls12-377-ext"
 version = "0.4.1"
-source = "git+https://github.com/paritytech/ark-substrate#9038300df4511eb23aae9264ab86ffdc3733d144"
+source = "git+https://github.com/paritytech/ark-substrate#fe182d591cd03a2a2fbeddfe281e85f738347531"
 dependencies = [
  "ark-bls12-377",
  "ark-ec",
- "ark-ff",
  "ark-models-ext",
- "ark-scale",
  "ark-std",
 ]
 
@@ -130,13 +128,13 @@ dependencies = [
 [[package]]
 name = "ark-bls12-381-ext"
 version = "0.4.1"
-source = "git+https://github.com/paritytech/ark-substrate#9038300df4511eb23aae9264ab86ffdc3733d144"
+source = "git+https://github.com/paritytech/ark-substrate#fe182d591cd03a2a2fbeddfe281e85f738347531"
 dependencies = [
  "ark-bls12-381",
  "ark-ec",
  "ark-ff",
  "ark-models-ext",
- "ark-scale",
+ "ark-serialize",
  "ark-std",
 ]
 
@@ -155,13 +153,12 @@ dependencies = [
 [[package]]
 name = "ark-bw6-761-ext"
 version = "0.4.1"
-source = "git+https://github.com/paritytech/ark-substrate#9038300df4511eb23aae9264ab86ffdc3733d144"
+source = "git+https://github.com/paritytech/ark-substrate#fe182d591cd03a2a2fbeddfe281e85f738347531"
 dependencies = [
  "ark-bw6-761",
  "ark-ec",
  "ark-ff",
  "ark-models-ext",
- "ark-scale",
  "ark-std",
 ]
 
@@ -197,13 +194,12 @@ dependencies = [
 [[package]]
 name = "ark-ed-on-bls12-377-ext"
 version = "0.4.1"
-source = "git+https://github.com/paritytech/ark-substrate#9038300df4511eb23aae9264ab86ffdc3733d144"
+source = "git+https://github.com/paritytech/ark-substrate#fe182d591cd03a2a2fbeddfe281e85f738347531"
 dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-377",
  "ark-ff",
  "ark-models-ext",
- "ark-scale",
  "ark-std",
 ]
 
@@ -222,13 +218,12 @@ dependencies = [
 [[package]]
 name = "ark-ed-on-bls12-381-bandersnatch-ext"
 version = "0.4.1"
-source = "git+https://github.com/paritytech/ark-substrate#9038300df4511eb23aae9264ab86ffdc3733d144"
+source = "git+https://github.com/paritytech/ark-substrate#fe182d591cd03a2a2fbeddfe281e85f738347531"
 dependencies = [
  "ark-ec",
  "ark-ed-on-bls12-381-bandersnatch",
  "ark-ff",
  "ark-models-ext",
- "ark-scale",
  "ark-std",
 ]
 
@@ -278,7 +273,7 @@ dependencies = [
 [[package]]
 name = "ark-models-ext"
 version = "0.4.1"
-source = "git+https://github.com/paritytech/ark-substrate#9038300df4511eb23aae9264ab86ffdc3733d144"
+source = "git+https://github.com/paritytech/ark-substrate#fe182d591cd03a2a2fbeddfe281e85f738347531"
 dependencies = [
  "ark-ec",
  "ark-ff",
@@ -1246,40 +1241,66 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "942b4a808e05215192e39f4ab80813e599068285906cc91aa64f923db842bd5a"
 
 [[package]]
-name = "sp-bls12-377"
-version = "0.4.1-beta"
+name = "sp-ark-bls12-377"
+version = "0.4.1"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-bls12-377-ext",
  "ark-ec",
  "ark-ff",
- "ark-serialize",
+ "ark-scale",
  "ark-std",
  "sp-crypto-ec-utils",
 ]
 
 [[package]]
-name = "sp-bls12-381"
-version = "0.4.1-beta"
+name = "sp-ark-bls12-381"
+version = "0.4.1"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-bls12-381-ext",
  "ark-ec",
  "ark-ff",
- "ark-serialize",
+ "ark-scale",
  "ark-std",
  "sp-crypto-ec-utils",
 ]
 
 [[package]]
-name = "sp-bw6-761"
-version = "0.4.1-beta"
+name = "sp-ark-bw6-761"
+version = "0.4.1"
 dependencies = [
  "ark-algebra-test-templates",
  "ark-bw6-761-ext",
  "ark-ec",
  "ark-ff",
- "ark-serialize",
+ "ark-scale",
+ "ark-std",
+ "sp-crypto-ec-utils",
+]
+
+[[package]]
+name = "sp-ark-ed-on-bls12-377"
+version = "0.4.1"
+dependencies = [
+ "ark-algebra-test-templates",
+ "ark-ec",
+ "ark-ed-on-bls12-377-ext",
+ "ark-ff",
+ "ark-scale",
+ "ark-std",
+ "sp-crypto-ec-utils",
+]
+
+[[package]]
+name = "sp-ark-ed-on-bls12-381-bandersnatch"
+version = "0.4.1"
+dependencies = [
+ "ark-algebra-test-templates",
+ "ark-ec",
+ "ark-ed-on-bls12-381-bandersnatch-ext",
+ "ark-ff",
+ "ark-scale",
  "ark-std",
  "sp-crypto-ec-utils",
 ]
@@ -1308,32 +1329,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.38",
-]
-
-[[package]]
-name = "sp-ed-on-bls12-377"
-version = "0.4.1-beta"
-dependencies = [
- "ark-algebra-test-templates",
- "ark-ec",
- "ark-ed-on-bls12-377-ext",
- "ark-ff",
- "ark-serialize",
- "ark-std",
- "sp-crypto-ec-utils",
-]
-
-[[package]]
-name = "sp-ed-on-bls12-381-bandersnatch"
-version = "0.4.1-beta"
-dependencies = [
- "ark-algebra-test-templates",
- "ark-ec",
- "ark-ed-on-bls12-381-bandersnatch-ext",
- "ark-ff",
- "ark-serialize",
- "ark-std",
- "sp-crypto-ec-utils",
 ]
 
 [[package]]

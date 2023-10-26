@@ -1,5 +1,5 @@
 [package]
-name = "sp-ed-on-bls12-377"
+name = "sp-ark-ed-on-bls12-377"
 description = "A Twisted Edwards curve defined over the scalar field of the BLS12-377 curve, optimized for Substrate"
 version.workspace = true
 authors.workspace = true
@@ -9,18 +9,27 @@ categories.workspace = true
 include.workspace = true
 license.workspace = true
 edition.workspace = true
+publish.workspace = true
 
 [dependencies]
 ark-ed-on-bls12-377-ext.workspace = true 
 ark-std.workspace = true 
 sp-crypto-ec-utils.workspace = true
+ark-scale.workspace = true 
+ark-ec.workspace = true 
 
 [dev-dependencies]
 ark-ff.workspace = true 
-ark-serialize.workspace = true 
 ark-algebra-test-templates.workspace = true 
-ark-ec.workspace = true 
 
 [features]
 default = [ "std" ]
-std = [ "ark-ed-on-bls12-377-ext/std", "ark-std/std", "sp-crypto-ec-utils/std" ]
+std = [
+  "ark-algebra-test-templates/std",
+  "ark-ed-on-bls12-377-ext/std",
+  "ark-ff/std",
+  "ark-ec/std",
+  "ark-scale/std",
+  "ark-std/std",
+  "sp-crypto-ec-utils/std"
+]

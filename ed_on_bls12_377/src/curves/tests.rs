@@ -1,5 +1,5 @@
-#![cfg_attr(not(feature = "std"), no_std)]
 use crate::EdwardsProjective;
 use ark_algebra_test_templates::*;
+use ark_scale::ark_serialize;
 
-test_group!(te; super::EdwardsProjective; te);
+test_group!(te; EdwardsProjective; te);

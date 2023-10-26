@@ -1,5 +1,5 @@
 [package]
-name = "sp-bls12-381"
+name = "sp-ark-bls12-381"
 description = "The BLS12-381 pairing-friendly elliptic curve, optimized for Substrate"
 version.workspace = true
 authors.workspace = true
@@ -9,18 +9,26 @@ categories.workspace = true
 include.workspace = true
 license.workspace = true
 edition.workspace = true
+publish.workspace = true
 
 [dependencies]
 ark-bls12-381-ext.workspace = true
 ark-std.workspace = true
 sp-crypto-ec-utils.workspace = true
 ark-ec.workspace = true
+ark-scale.workspace = true
 
 [dev-dependencies] 
 ark-ff.workspace = true
-ark-serialize.workspace = true
 ark-algebra-test-templates.workspace = true
 
 [features]
 default = [ "std" ]
-std = [ "ark-bls12-381-ext/std", "ark-std/std", "sp-crypto-ec-utils/std" ]
+std = [
+  "ark-bls12-381-ext/std",
+  "ark-std/std",
+  "sp-crypto-ec-utils/std",
+  "ark-scale/std",
+  "ark-ec/std",
+  "ark-ff/std"
+]

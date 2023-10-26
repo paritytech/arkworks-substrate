@@ -1,7 +1,9 @@
 use ark_algebra_test_templates::*;
 use ark_ec::{pairing::PairingOutput, AffineRepr, CurveGroup, Group};
 use ark_ff::{fields::Field, One, Zero};
-use ark_serialize::{CanonicalDeserialize, CanonicalSerialize, Compress, Validate};
+use ark_scale::ark_serialize::{
+    self, CanonicalDeserialize, CanonicalSerialize, Compress, Validate,
+};
 use ark_std::{rand::Rng, test_rng, vec, UniformRand};
 
 use crate::{
