@@ -15,7 +15,7 @@ authors = [
   "Achim Schneider <achim@parity.io>",
   "Davide Galassi <davxy@datawok.net>"
 ]
-repository = "https://github.com/paritytech/substrate-curves"
+repository = "https://github.com/paritytech/arkworks-substrate"
 keywords = ["cryptography", "elliptic-curves", "pairing", "arkworks", "substrate"]
 categories = ["cryptography"]
 include = ["Cargo.toml", "src", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
