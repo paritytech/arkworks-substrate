@@ -9,7 +9,6 @@ categories.workspace = true
 include.workspace = true
 license.workspace = true
 edition.workspace = true
-publish.workspace = true
 
 [dependencies]
 ark-bw6-761-ext.workspace = true

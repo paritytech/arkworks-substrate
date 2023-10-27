@@ -21,7 +21,6 @@ categories = ["cryptography"]
 include = ["Cargo.toml", "src", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
 license = "MIT/Apache-2.0"
 edition = "2021"
-publish = false
 
 [workspace.dependencies]
 ark-std = { version = "0.4.0", default-features = false }
@@ -30,12 +29,12 @@ ark-bls12-381-ext = { version = "0.4.1", default-features = false }
 ark-bw6-761-ext = { version = "0.4.1", default-features = false }
 ark-ed-on-bls12-377-ext = { version = "0.4.1", default-features = false }
 ark-ed-on-bls12-381-bandersnatch-ext = { version = "0.4.1", default-features = false }
-sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", default-features = false }
+sp-crypto-ec-utils =  { git = "https://github.com/paritytech/polkadot-sdk", version = "0.4.0", default-features = false }
 ark-algebra-test-templates = { version = "0.4.2", default-features = false }
 ark-ff = { version = "0.4.2", default-features = false }
 ark-ec = { version = "0.4.2", default-features = false }
 ark-serialize = { version = "0.4.2", default-features = false }
-ark-scale = { version = "0.0.11", default-features = false }
+ark-scale = { version = "0.0.11", default-features = false, features = ["hazmat"] }
 
 [profile.release]
 opt-level = 3
