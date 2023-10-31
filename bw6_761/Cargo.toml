@@ -12,23 +12,18 @@ edition.workspace = true
 
 [dependencies]
 ark-bw6-761-ext.workspace = true
-ark-std.workspace = true
-sp-crypto-ec-utils.workspace = true
-ark-scale.workspace = true
-ark-ec.workspace = true 
+sp-crypto-ec-utils = { workspace = true, features = ["bw6-761"] }
 
 [dev-dependencies]
+ark-serialize.workspace = true
 ark-ff.workspace = true
 ark-algebra-test-templates.workspace = true
+ark-ec.workspace = true 
+ark-std.workspace = true
 
 [features]
 default = [ "std" ]
 std = [
-  "ark-algebra-test-templates/std",
   "ark-bw6-761-ext/std",
-  "ark-ec/std",
-  "ark-ff/std",
-  "ark-std/std",
-  "ark-scale/std",
   "sp-crypto-ec-utils/std"
 ]
