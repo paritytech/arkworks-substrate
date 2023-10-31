@@ -23,7 +23,4 @@ ark-algebra-test-templates.workspace = true
 
 [features]
 default = [ "std" ]
-std = [
-  "ark-ed-on-bls12-377-ext/std",
-  "sp-crypto-ec-utils/std"
-]
+std = [ "ark-ed-on-bls12-377-ext/std", "sp-crypto-ec-utils/std" ]

@@ -23,7 +23,4 @@ ark-std.workspace = true
 
 [features]
 default = [ "std" ]
-std = [
-  "ark-bw6-761-ext/std",
-  "sp-crypto-ec-utils/std"
-]
+std = [ "ark-bw6-761-ext/std", "sp-crypto-ec-utils/std" ]
