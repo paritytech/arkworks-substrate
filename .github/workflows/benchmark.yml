@@ -35,7 +35,7 @@ jobs:
         run: cp ark-substrate/benchmarking/Cargo.toml substrate-arkworks-examples/Cargo.toml
       - name: Get branch name
         id: branch-name
-        uses: tj-actions/branch-names@v6  
+        uses: tj-actions/branch-names@v7.0.7  
       - name: Use current PR branch for benchmarking
         run: sed -i 's,replace-with-pr-branch,${{ steps.branch-name.outputs.current_branch }},g' substrate-arkworks-examples/Cargo.toml 
       - name: Compute benchmarks for pr branch
